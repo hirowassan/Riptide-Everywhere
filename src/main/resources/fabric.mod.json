@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "riptide",
+  "version": "1.0.0",
+  "name": "Riptide Everywhere",
+  "description": "This mod allows you to use Riptide in any weather condition.",
+  "authors": ["hirowassan"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/riptide/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.hirowassan.riptide.client.RiptideDataGenerator"
+    ],
+    "client": [
+      "com.hirowassan.riptide.client.RiptideClient"
+    ],
+    "main": [
+      "com.hirowassan.riptide.Riptide"
+    ]
+  },
+  "mixins": [
+    "riptide.mixins.json",
+    {
+      "config": "riptide.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

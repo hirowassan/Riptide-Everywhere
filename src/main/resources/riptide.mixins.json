@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.hirowassan.riptide.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "TridentItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
